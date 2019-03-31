@@ -25,10 +25,10 @@ namespace TimetableApp.Resources.adapter
         }
 
         private List<int> roomNums;
-        private List<bool> isBusy;
+        private readonly List<bool> isBusy;
         private Activity activity;
-        private string busy;
-        private string free;
+        private readonly string busy;
+        private readonly string free;
         
 
         public ListView_RoomNumAdapter(Activity ac, List<int> rn, List<bool> ib, string b, string f)

@@ -18,6 +18,9 @@ using TimetableApp.API;
 using TimetableApp.Model;
 using TimetableApp.Resources.adapter;
 using AlertDialog = Android.Support.V7.App.AlertDialog;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace TimetableApp
 {
@@ -37,6 +40,9 @@ namespace TimetableApp
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AppCenter.Start("6cd9c31f-228d-4c66-8b34-8c2679d0565e",
+                   typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("6cd9c31f-228d-4c66-8b34-8c2679d0565e", typeof(Analytics), typeof(Crashes));
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
